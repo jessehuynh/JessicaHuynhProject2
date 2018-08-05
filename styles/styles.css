@@ -223,7 +223,8 @@ nav {
   font-size: 3rem;
   line-height: 3;
   color: #1d1d1d;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .section__heading .welcome__heading--primary {
     color: #0e5f88; }
 
@@ -361,6 +362,21 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    text-align: center; }
+
+.moreServices .wrapper {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .moreServices .wrapper .moreServices__text, .moreServices .wrapper .moreServices__img {
+    width: calc(100% / 2);
+    border: 1px solid slateblue;
+    margin: 1.5% 0;
     text-align: center; }
 
 html {
