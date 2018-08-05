@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Corporate</title>
@@ -12,22 +12,24 @@
 <body>
     <!-- HEADER STARTS HERE -->
     <header>
-        <div class="headerTop">
-            <h2 class="logo--black">Corporate</h2>
-            <nav class="nav">
-                <ul class="nav__container">
-                    <li class="nav__listItem--black"><a href="#">Demo</a></li>
-                    <li class="nav__listItem--black"><a href="#">Blog</a></li>
-                    <li class="nav__listItem--black"><a href="#">Pages</a></li>
-                    <li class="nav__listItem--black"><a href="#">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="headerBottom">
-            <h1>Welcome</h1>
-            <h4 class="subTitle--uppercase">To my corporate website</h4>
-            <button class="btn--blue">Start</button>
+        <div class="wrapper">
+            <div class="logoNav">
+                <h2 class="logoNav__logo--black">Corporate</h2>
+                <nav class="nav">
+                    <ul class="nav__container">
+                        <li class="nav__listItem--black"><a href="#">Demo</a></li>
+                        <li class="nav__listItem--black"><a href="#">Blog</a></li>
+                        <li class="nav__listItem--black"><a href="#">Pages</a></li>
+                        <li class="nav__listItem--black"><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="heading">
+                <h1>Welcome</h1>
+                <h4 class="subTitle--uppercase">To my corporate website</h4>
+                <button class="btn--blue">Start</button>
+            </div>
         </div>
     </header>
     <!-- HEADER ENDS -->
@@ -67,7 +69,7 @@
             <div class="services__container">
                 <article class="card--bordered">
                     <i class="fas fa-object-group"></i>
-                    <h5>UX/UI Design</h5>
+                    <h5 class="card__heading--small">UX/UI Design</h5>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                         <ul class="card__list">
@@ -79,7 +81,7 @@
                 </article>
                 <article class="card--blue">
                     <i class="fas fa-laptop"></i>
-                    <h5>UX/UI Design</h5>
+                    <h5 class="card__heading--small">UX/UI Design</h5>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                         <ul class="card__list">
@@ -91,7 +93,7 @@
                 </article>
                 <article class="card--bordered">
                     <i class="fas fa-chart-line"></i>
-                    <h5>UX/UI Design</h5>
+                    <h5 class="card__heading--small">UX/UI Design</h5>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                         <ul class="card__list">
@@ -180,21 +182,21 @@
                 <figure class="card">
                     <img src="assets/image-12.jpeg" alt="">
                         <figcaption>
-                            <h4>Andrew Mathews</h4>
+                            <h4 class="card__heading--big">Andrew Mathews</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
                 </figure>
                 <figure class="card">
                     <img src="assets/image-13.jpeg" alt="">
                         <figcaption>
-                            <h4>David Regan</h4>
+                            <h4 class="card__heading--big">David Regan</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
                 </figure>
                 <figure class="card">
                     <img src="assets/image-14.jpeg" alt="">
                         <figcaption>
-                            <h4>Vanessa Thomas</h4>
+                            <h4 class="card__heading--big">Vanessa Thomas</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
                 </figure>
@@ -232,9 +234,9 @@
                     <figure class="gallery_image"><img src="assets/image-22.jpeg" alt=""></figure>
                 </div>
             </div>
-
-            <h2 class="logo--white">Corporate</h2>
-            <nav class="nav">
+            <div class="logoNav">
+                <h2 class="logo--white">Corporate</h2>
+                <nav class="nav">
                     <ul class="nav__container">
                         <li class="nav__listItem--white"><a href="#">Demo</a></li>
                         <li class="nav__listItem--white"><a href="#">Blog</a></li>
@@ -242,6 +244,7 @@
                         <li class="nav__listItem--white"><a href="#">About Us</a></li>
                     </ul>
                 </nav>
+            </div>
         </div>
 
 

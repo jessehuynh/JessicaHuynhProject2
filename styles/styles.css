@@ -137,47 +137,77 @@ header {
   background-size: cover;
   height: 100vh; }
 
-.logoNav {
+.wrapper {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
-  .logoNav .logoNav__logo--black {
-    border: 1px solid red;
-    font-size: 3.5rem; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 60%; }
 
-.nav__container {
+.logoNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  width: 200%;
-  font-weight: 700;
-  border: 1px solid cyan;
-  padding: 0; }
-  .nav__container .nav__listItem--black {
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 2rem; }
-    .nav__container .nav__listItem--black a {
-      text-decoration: none;
-      color: #1d1d1d; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .logoNav .logoNav__logo--black {
+    font-size: 3.5rem;
+    width: 50%;
+    font-weight: 700; }
+
+nav {
+  width: 50%; }
+  nav .nav__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 0; }
+    nav .nav__container .nav__listItem--black {
+      list-style: none;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700; }
+      nav .nav__container .nav__listItem--black a {
+        text-decoration: none;
+        color: #1d1d1d;
+        padding: 10px; }
 
 html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.6rem; }
+  font-family: "Opensans", sans-serif;
+  color: #1d1d1d;
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #1d1d1d; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
   color: #1d1d1d;
-  line-height: 3;
   text-transform: uppercase; }
+
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+  color: #1d1d1d; }
+
+h4 {
+  font-size: 2.75rem;
+  line-height: 1;
+  color: #1d1d1d; }
