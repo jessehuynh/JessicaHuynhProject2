@@ -11,5 +11,12 @@ html {
 }
 
 body {
-    @include font('Montserrat', 1.6rem, $base);
+    // @include font('Opensans', 400, $base, 1);
+    font-size:1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    @include font('Montserrat', 700, $base, 3);
+    text-transform:uppercase;
 }
