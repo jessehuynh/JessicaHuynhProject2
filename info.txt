@@ -2,3 +2,18 @@ Fonts
 Montserrat (Google Fonts)
 Open Sans (Google Fonts)
 Font Awesome (https://fontawesome.com/)
+
+h1 - 83px color 1d1d1d
+h2 - 48px 1d1d1d
+h4 - 34px uppercase
+h5 - uppercase
+
+nav--black - 24px
+nav--white - 16px
+
+p--medium - 26px 5d5e5d
+p--small - 16px 1d1d1d
+
+button - 24px 0e5f88 --black 1d1d1d
+
+li - 16px
