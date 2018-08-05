@@ -11,14 +11,20 @@ html {
 }
 
 body {
-    @include fontBase('Opensans');
+    @include fontBase('Opensans', none);
     @include fontSize(1.6rem, 2)
+}
+
+img {
+    width:100%;
+    display:block;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin:0;
-    @include fontBase('Montserrat');
-    text-transform:uppercase;
+    // font-family:'Montserrat', sans-serif;
+    @include fontBase('Montserrat', uppercase);
+    // text-transform:uppercase;
 }
 
 h1 {
@@ -26,6 +32,6 @@ h1 {
 }
 
 h4 {
-    @include fontSize(2.75rem, 1);
+    @include fontSize(2.75rem, 2);
 }
 
