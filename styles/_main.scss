@@ -1,3 +1,5 @@
+// WELCOME SECTION STYLES 
+
 .welcome .wrapper {
     text-align:center;
     margin:3% auto;
@@ -10,10 +12,14 @@
         color:#0e5f88;
     }
 }
-
+.section__heading--small {
+    @include fontSize(2.5rem, 1);
+}
 .section__heading--white {
     color:white;
 }
+
+// WHY CHOOSE US SECTION STYLES
 
 .why .section__heading{
     // border:1px solid sienna;
@@ -41,7 +47,6 @@
         background:url(../assets/image-4.jpeg);
         background-size:cover;
     }
-
 }
 
 .why__section__list {
@@ -62,25 +67,20 @@
         width:80%;
         padding-left:2%;
     }
-    .section__heading {
-        @include fontSize(3.5rem, 0);
-    }
-    .section__heading--small {
-        @include fontSize(2.5rem, 1);
-    }
 }
+
+// SERVICES SECTION STYLES
 
 .services__container {
     // border:1px solid rebeccapurple;
     display: flex;
     .card {
-        width:calc((100% - 2%) /3);
+        width:calc((100% - 2%) / 3);
         border-radius:5px;
         margin:1%;
         padding:3% 2%;
         text-align:center;
         i {
-            // border: 1px solid pink;
             font-size:8rem;
         }
     }
@@ -102,6 +102,8 @@
     }
 }
 
+// TESTIMONIALS STYLES
+
 .testimonials {
     background:$base;
     color:white;
@@ -112,5 +114,40 @@
 .icon {
     width:10%;
     margin:0 auto;
-    // text-align:center;
+}
+
+.gallery .wrapper {
+    width:100%;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+}
+
+.gallery {
+    // border:1px solid red;
+    .gallery__image {
+        // border:2px solid rebeccapurple;
+        width:calc(100% / 4);
+        position: relative;
+        &:hover .gallery__image__caption {
+            display:flex;
+        }
+    }
+    .gallery__image__caption {
+        display:none;
+        background:rgba(0,0,0,0.7);
+        color:white;
+        position: relative;
+        @include position(absolute, 0, 0, 0, 0);
+        .card {
+            @include position(absolute, 0, 0, 0, 0);
+            border:1px solid white;
+            border-radius:5px;
+            margin:4%;
+            display:flex;
+            flex-flow:column wrap;
+            justify-content: center;
+            text-align:center;
+        }
+    }
 }

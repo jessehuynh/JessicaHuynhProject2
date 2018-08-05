@@ -151,9 +151,12 @@ header {
   background-size: cover;
   height: 100vh; }
 
+header .wrapper {
+  margin: 0 auto; }
+
 .wrapper {
   width: 80%;
-  margin: 4% auto;
+  margin: 3% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,6 +181,8 @@ header {
   align-items: center; }
   .logoNav .logoNav__logo--black {
     font-size: 3.5rem;
+    line-height: 0;
+    color: #1d1d1d;
     width: 50%;
     font-weight: 700; }
 
@@ -221,6 +226,11 @@ nav {
   text-align: center; }
   .section__heading .welcome__heading--primary {
     color: #0e5f88; }
+
+.section__heading--small {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #1d1d1d; }
 
 .section__heading--white {
   color: white; }
@@ -268,21 +278,13 @@ nav {
   .why__section__list .why__section__list__item:nth-child(2) {
     width: 80%;
     padding-left: 2%; }
-  .why__section__list .section__heading {
-    font-size: 3.5rem;
-    line-height: 0;
-    color: #1d1d1d; }
-  .why__section__list .section__heading--small {
-    font-size: 2.5rem;
-    line-height: 1;
-    color: #1d1d1d; }
 
 .services__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .services__container .card {
-    width: calc((100% - 2%) /3);
+    width: calc((100% - 2%) / 3);
     border-radius: 5px;
     margin: 1%;
     padding: 3% 2%;
@@ -310,6 +312,56 @@ nav {
 .icon {
   width: 10%;
   margin: 0 auto; }
+
+.gallery .wrapper {
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.gallery .gallery__image {
+  width: calc(100% / 4);
+  position: relative; }
+  .gallery .gallery__image:hover .gallery__image__caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.gallery .gallery__image__caption {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .gallery .gallery__image__caption .card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
 
 html {
   font-size: 62.5%; }
