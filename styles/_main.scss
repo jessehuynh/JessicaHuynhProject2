@@ -13,7 +13,8 @@
         color:$primary;
     }
 }
-.section__heading--small {
+
+.section__heading--medium {
     @include fontSize(2.5rem, 1);
 }
 .section__heading--white {
@@ -76,7 +77,6 @@
     display: flex;
     .card {
         width:calc((100% - 2%) / 3);
-        border-radius:5px;
         margin:1%;
         padding:3% 2%;
         text-align:center;
@@ -86,10 +86,12 @@
     }
     .card--bordered {
         border:1px solid $secondary;
+        border-radius:5px;
     }
 
     .card--filled {
         background:$secondary;
+        border-radius:5px;
     }
 }
 
@@ -216,17 +218,28 @@
 // TEAM SECTION STYLES
 
 .team .card {
-    border:1px solid red;
+    // border:1px solid red;
     position: relative;
     width:100%;
     padding:0;
     overflow: hidden;
+    &:hover .card__caption {
+        display:flex;
+    }
+    .card--cornered {
+        border-radius:none;
+    }
     .card__caption {
-        border:1px solid red;
+        // border:1px solid red;
+        display:none;
+        background:rgba(0,0,0,0.7);
         @include position(absolute, 0, 0, 0, 0);
-        display: flex;
         flex-direction:column;
         justify-content: center;
         color:$white;
+        .card__caption__text {
+            margin:0;
+            text-transform: uppercase;
+        }
     }
 }

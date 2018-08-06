@@ -37,20 +37,22 @@ nav {
     .nav__container {
         display: flex;
         justify-content: space-around;
-        // font-weight:700;
         // border:1px solid cyan;
         padding:0;
-        .nav__listItem--black {
-            list-style:none;
+        .nav__listItem--big {
             text-transform:uppercase;
             font-size:2rem;
             font-weight:700;
-            // border:1px solid red;
-            a {
+
+        }
+        .nav__listItem {
+            list-style:none;
+            .nav__listItem__a {
                 text-decoration:none;
+                padding:10px 10px 10px 25px;
+            }
+            .nav__listItem__a--black {
                 color:$base;
-                padding:10px;
-                // font-weight:700;
             }
         }
     }

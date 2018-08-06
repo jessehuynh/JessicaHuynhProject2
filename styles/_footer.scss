@@ -1,0 +1,36 @@
+footer {
+    background:$base;
+    color:$white;
+}
+
+.section__heading--small {
+    @include fontSize(2rem, 1);
+    color:$white;
+}
+nav {
+    // border:1px solid red;
+    .nav__container--column {
+        flex-direction:column;
+        .nav__listItem--white::before {
+            font-family:'Font Awesome 5 Free';
+            position: absolute;
+            font-weight:900;
+        }
+        .nav__listItem--white:nth-of-type(1)::before {
+            content:'\f0e0';
+            font-weight:400;
+        }
+        .nav__listItem--white:nth-of-type(2)::before {
+            content:'\f095';
+        }
+        .nav__listItem--white:nth-of-type(3)::before {
+            content:'\f3c5';
+        }
+        // border:1px solid red;
+        .nav__listItem__a--white {
+            color:$white;
+        }
+    }
+    
+}
+
