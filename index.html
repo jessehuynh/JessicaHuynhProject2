@@ -84,7 +84,7 @@
         <section class="services">
             <div class="wrapper">
                 <h3 class="section__heading">Services</h3>
-                <div class="services__container">
+                <div class="container">
                     <article class="card card--bordered">
                         <i class="fas fa-object-group"></i>
                         <h5 class="card__heading--small">UX/UI Design</h5>
@@ -207,7 +207,7 @@
         <!-- ASK A QUESTION SECTION -->
         <section class="ask">
             <div class="wrapper">
-                <h3>Ask a Question</h3>
+                <h3 class="section__heading">Ask a Question</h3>
                 <form action="message.php" method="POST" class="myForm" autocomplete="off" name="myForm">
                     <input type="text" class="ask" name="ask" placeholder="Your Message">
                     <input type="submit" value="Send">
@@ -218,27 +218,30 @@
         <!-- OUR TEAM SECTION -->
         <section class="team">
             <div class="wrapper">
-                <figure class="card">
-                    <img src="assets/image-12.jpeg" alt="">
-                        <figcaption>
+                <h3 class="section__heading">Our Team</h3>
+                <div class="container">
+                    <figure class="card">
+                        <img src="assets/image-12.jpeg" alt="">
+                        <figcaption class="card__caption">
                             <h4 class="card__heading--big">Andrew Mathews</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="assets/image-13.jpeg" alt="">
-                        <figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="assets/image-13.jpeg" alt="">
+                        <figcaption class="card__caption">
                             <h4 class="card__heading--big">David Regan</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="assets/image-14.jpeg" alt="">
-                        <figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="assets/image-14.jpeg" alt="">
+                        <figcaption class="card__caption">
                             <h4 class="card__heading--big">Vanessa Thomas</h4>
                             <p class="--uppercase">Programmer</p>
                         </figcaption>
-                </figure>
+                    </figure>
+                </div>
             </div>
         </section>
      

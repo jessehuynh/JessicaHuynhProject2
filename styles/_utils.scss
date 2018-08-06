@@ -1,6 +1,8 @@
 $primary:#0e5f88;
 $secondary:#8ecceb;
 $base:#1d1d1d;
+$soft:#f1f3f3;
+$white:white;
 
 @mixin position($position, $top, $right, $bottom, $left) {
     position: $position;
