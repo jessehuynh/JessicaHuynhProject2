@@ -11,3 +11,12 @@ $white:white;
     bottom:$bottom;
     left:$left;
 }
+
+@mixin breakPoint($point) {
+    @if $point == firstBreak {
+        @media (max-width:1165px) { @content;}
+    }
+    @if $point == secondBreak {
+        @media (max-width:1080px) { @content;}
+    }
+}

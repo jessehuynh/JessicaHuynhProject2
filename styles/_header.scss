@@ -1,6 +1,7 @@
 header {
     background:url(../assets/image-1.jpeg) no-repeat;
     background-size:cover;
+    background-position: bottom;
     height:100vh;
 }
 
@@ -25,15 +26,16 @@ header .wrapper {
     align-items:center;
     .logoNav__logo--black {
         // border:1px solid red;
-        @include fontSize(3.5rem, 0);
-        width:50%;
+        @include fontSize(3.5rem, 1);
         font-weight:700;
     }
-
 }
 
 nav {
     width:50%;
+    @include breakPoint(firstBreak) {
+        width:70%;
+    }
     .nav__container {
         display: flex;
         justify-content: space-around;
@@ -63,6 +65,9 @@ nav {
     border-radius:5px;
     background:$primary;
     text-transform:uppercase;
+    @include breakPoint(secondBreak) {
+        padding:10px 20px;
+    }
     a {
         color:$white;
         text-decoration:none;
