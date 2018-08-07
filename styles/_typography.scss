@@ -2,11 +2,11 @@
 @mixin fontSize($fontSize, $lineHeight) {
     font-size: $fontSize;
     line-height:$lineHeight;
-    color:#1d1d1d;
+    color:$base;
 }
 
 @mixin fontBase($fontFamily, $textTransform) {
     font-family:$fontFamily, sans-serif;
     text-transform:$textTransform;
-    color:#1d1d1d;
+    color:$base;
 }
