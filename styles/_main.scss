@@ -2,7 +2,7 @@
 
 .welcome .wrapper {
     text-align:center;
-    margin:3% auto;
+    // margin:3% auto;
 }
 
 .section__heading {
@@ -41,6 +41,7 @@
         // border:1px solid cornflowerblue;
     }
     .why__section:nth-child(1) {
+        // border:1px solid red;
         margin:4% 5%;
         width:calc(50% - 10%);
     }
@@ -54,8 +55,6 @@
 .why__section__list {
     // border:1px solid red;
     display:flex;
-    // flex-direction:row;
-    // align-items:center;
     width:100%;
     list-style:none;
     padding:0;
@@ -76,11 +75,12 @@
     // border:1px solid rebeccapurple;
     display: flex;
     .card {
+        // border:1px solid red;
         width:calc((100% - 2%) / 3);
         margin:1%;
         padding:3% 2%;
         text-align:center;
-        i {
+        .card__icon--big {
             font-size:8rem;
         }
     }
@@ -92,6 +92,9 @@
     .card--filled {
         background:$secondary;
         border-radius:5px;
+    }
+    .card--left {
+        text-align:left;
     }
 }
 
@@ -122,11 +125,13 @@
     width:100%;
     margin:0;
     display:flex;
-    flex-direction:row;
+    flex-flow: row wrap;
 }
 
 .gallery {
     // border:1px solid red;
+    width:100%;
+    flex-flow:row wrap;
     .gallery__image {
         // border:2px solid rebeccapurple;
         width:calc(100% / 4);
@@ -138,18 +143,19 @@
     .gallery__image__caption {
         display:none;
         background:rgba(0,0,0,0.7);
-        color:white;
+        color:$white;
         position: relative;
         @include position(absolute, 0, 0, 0, 0);
         .card {
             @include position(absolute, 0, 0, 0, 0);
-            border:1px solid white;
+            border:1px solid $white;
             border-radius:5px;
             margin:4%;
             display:flex;
             flex-flow:column wrap;
             justify-content: center;
             text-align:center;
+            // border:1px solid red;
         }
     }
 }
@@ -160,10 +166,12 @@
     // border:1px solid red;
     display: flex;
     flex-direction:row;
+    align-items:center;
     .moreServices__text, .moreServices__img {
         width:calc(100% / 2);
         // border:1px solid slateblue;
         margin:1.5% 0;
+        align-items:space-between;
         text-align:center;
     }
     .moreServices__text {
@@ -195,6 +203,7 @@
             flex-direction:column;
             align-items:center;
             width:60%;
+            // border:1px solid red;
             input[type="text"] {
                 border:1px solid $base;
                 text-align:center;
@@ -242,4 +251,16 @@
             text-transform: uppercase;
         }
     }
+}
+
+.logoNav--column {
+    flex-direction:column;
+    justify-content: center;
+    .logoNav__logo--white {
+        color:$white;
+    }
+}
+
+.nav__listItem__a--white {
+    color:$white;
 }

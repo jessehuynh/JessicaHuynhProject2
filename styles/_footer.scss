@@ -1,6 +1,25 @@
 footer {
     background:$base;
     color:$white;
+    .wrapper {
+        margin-bottom:0;
+    }
+    .myForm {
+        border:1px solid $white;
+        display:flex;
+        input[type="email"] {
+            border:none;
+            background:$base;
+            color:$white;
+            flex:1 0;
+            padding:10px;
+        }
+        button {
+            background:none;
+            border:none;
+            opacity:0.5;
+        }
+    }
 }
 
 .section__heading--small {
@@ -10,20 +29,25 @@ footer {
 nav {
     // border:1px solid red;
     .nav__container--column {
-        flex-direction:column;
-        .nav__listItem--white::before {
+        flex-flow:column wrap;
+        position: relative;
+        .nav__listItem--lowercase {
+            text-transform:lowercase;
+            font-weight:400;
+        }
+        .nav__listItem--lowercase::before {
             font-family:'Font Awesome 5 Free';
             position: absolute;
             font-weight:900;
         }
-        .nav__listItem--white:nth-of-type(1)::before {
+        .nav__listItem--lowercase:nth-of-type(1)::before {
             content:'\f0e0';
             font-weight:400;
         }
-        .nav__listItem--white:nth-of-type(2)::before {
+        .nav__listItem--lowercase:nth-of-type(2)::before {
             content:'\f095';
         }
-        .nav__listItem--white:nth-of-type(3)::before {
+        .nav__listItem--lowercase:nth-of-type(3)::before {
             content:'\f3c5';
         }
         // border:1px solid red;
@@ -31,6 +55,34 @@ nav {
             color:$white;
         }
     }
-    
 }
 
+.gallery--instagram {
+    // border:1px solid paleturquoise;
+    align-content: space-around;
+    justify-content: space-around;
+    height:80%;
+    .gallery__image--small {
+        margin-right:10px;
+        width:calc((100% - 30px) / 4);
+        justify-content: space-around;
+    }
+    .gallery__image--small:nth-of-type(4), .gallery__image--small:nth-of-type(8) {
+        margin-right:0;
+    }
+}
+
+.container--borderBottom {
+    border-bottom:1px solid white;
+}
+
+.card__icon--small {
+    color:$white;
+}
+
+.credits {
+    @include fontBase('Opensans', capitalize);
+    color:$white;
+    text-align:center;
+    padding-bottom:1px;
+}

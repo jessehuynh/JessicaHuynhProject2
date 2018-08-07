@@ -12,12 +12,13 @@ html {
 
 body {
     @include fontBase('Opensans', none);
-    @include fontSize(1.6rem, 2)
+    @include fontSize(1.6rem, 2)    
 }
 
 img {
     width:100%;
     display:block;
+    // line-height:0;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -86,7 +86,7 @@
                 <h3 class="section__heading">Services</h3>
                 <div class="container">
                     <article class="card card--bordered">
-                        <i class="fas fa-object-group"></i>
+                        <i class="fas fa-object-group card__icon--big"></i>
                         <h5 class="card__heading--small">UX/UI Design</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
@@ -98,7 +98,7 @@
                         </p>
                     </article>
                     <article class="card card--filled">
-                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-laptop card__icon--big"></i>
                         <h5 class="card__heading--small">Programming</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
@@ -110,7 +110,7 @@
                         </p>
                     </article>
                     <article class="card card--bordered">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line card__icon--big"></i>
                         <h5 class="card__heading--small">Analytics</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
@@ -251,48 +251,77 @@
     <!-- FOOTER STARTS -->
     <footer>
         <div class="wrapper">
-            <div class="card">
-                <h5 class="section__heading--small section__heading--white">Contact</h5>
-                <nav>
-                    <ul class="nav__container nav__container--column">
-                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">infohackeryou.com</a></li>
-                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">123-456-7890</a></li>
-                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white"  href="#">Toronto, Ontario</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="third">
-                <h5 class="section__heading--small section__heading--white">About</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur nulla vero ad. Soluta culpa illo itaque neque repellat nam, perspiciatis dicta officia, placeat laborum possimus in, iusto pariatur autem perferendis? Ab asperiores enim dolorem sed blanditiis magnam consequatur vel minima?</p>
-            </div>
-            <div class="card">
-                <h5 class="section__heading--small section__heading--white">Instagram</h5>
-                <div class="gallery">
-                    <figure class="gallery__image"><img src="assets/image-15.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-16.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-17.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-18.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-19.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-20.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-21.jpeg" alt=""></figure>
-                    <figure class="gallery__image"><img src="assets/image-22.jpeg" alt=""></figure>
+            <div class="container container--borderBottom">
+                <div class="card card--left">
+                    <h5 class="section__heading--small section__heading--white">Contact</h5>
+                    <nav>
+                        <ul class="nav__container nav__container--column">
+                            <li class="nav__listItem nav__listItem--lowercase">
+                                <a class="nav__listItem__a nav__listItem__a--white" href="#">infohackeryou.com</a>
+                            </li>
+                            <li class="nav__listItem nav__listItem--lowercase">
+                                <a class="nav__listItem__a nav__listItem__a--white" href="#">123-456-7890</a>
+                            </li>
+                            <li class="nav__listItem nav__listItem--lowercase">
+                                <a class="nav__listItem__a nav__listItem__a--white"  href="#">Toronto, Ontario</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <form action="message.php" method="POST" class="myForm" autocomplete="off" name="myForm">
+                        <input type="email" class="email" name="email" placeholder="email address">
+                        <button><i class="fas fa-paper-plane card__icon--small"></i></button>
+                    </form>
+                </div>
+                <div class="card card--left">
+                    <h5 class="section__heading--small section__heading--white">About</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit vitae illo nobis iusto dolorum ipsum est laboriosam saepe perspiciatis itaque inventore at, sunt adipisci cum, veritatis dolores sint expedita?</p>
+                </div>
+                <div class="card card--left">
+                    <h5 class="section__heading--small section__heading--white">Instagram</h5>
+                    <div class="gallery gallery--instagram wrapper">
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-15.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-16.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-17.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-18.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-19.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-20.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-21.jpeg" alt="">
+                        </figure>
+                        <figure class="gallery__image gallery__image--small">
+                            <img src="assets/image-22.jpeg" alt="">
+                        </figure>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h2 class="logo--white">Corporate</h2>
+            <div class="logoNav logoNav--column">
+                <h2 class="logoNav__logo logoNav__logo--white">Corporate</h2>
                 <nav class="nav">
                     <ul class="nav__container">
-                        <li class="nav__listItem--white"><a href="#">Demo</a></li>
-                        <li class="nav__listItem--white"><a href="#">Blog</a></li>
-                        <li class="nav__listItem--white"><a href="#">Pages</a></li>
-                        <li class="nav__listItem--white"><a href="#">About Us</a></li>
+                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">Demo</a></li>
+                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">Blog</a></li>
+                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">Pages</a></li>
+                        <li class="nav__listItem nav__listItem--white"><a class="nav__listItem__a nav__listItem__a--white" href="#">About Us</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        <div class="credits">
+            <p>2018 All Rights Reserved &copy;</p>
+        </div>
     </footer>
      <!-- FOOTER ENDS -->
-
-
 </body>
 </html>
