@@ -251,13 +251,16 @@ nav {
     text-decoration: none; }
 
 .hamburger {
+  display: none;
   font-size: 3.5rem;
   line-height: 1;
   color: #1d1d1d; }
+  @media (max-width: 775px) {
+    .hamburger {
+      display: block; } }
 
 @media (max-width: 775px) {
   header .logoNav {
-    border: 1px solid red;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; } }
@@ -268,16 +271,54 @@ nav {
     border: 1px solid sienna; } }
 
 header .logoNav nav.show {
-  display: block;
+  display: none;
   background: white; }
+  @media (max-width: 775px) {
+    header .logoNav nav.show {
+      display: block; } }
   header .logoNav nav.show .nav__container {
-    background: white;
+    background: #0e5f88;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: 0; }
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: white; }
+    header .logoNav nav.show .nav__container .nav__listItem:not(.exit-responsive) {
+      width: 100%;
+      text-align: center;
+      font-size: 4rem;
+      line-height: 3;
+      color: #1d1d1d; }
+      header .logoNav nav.show .nav__container .nav__listItem:not(.exit-responsive) .nav__listItem__a {
+        color: white;
+        width: 100%;
+        display: block; }
+        header .logoNav nav.show .nav__container .nav__listItem:not(.exit-responsive) .nav__listItem__a:hover {
+          background: #8ecceb; }
+
+.exit {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+  top: -80px;
+  right: -20px; }
+  .exit .exit-responsive {
+    display: none;
+    color: white;
+    font-size: 4rem; }
+    @media (max-width: 775px) {
+      .exit .exit-responsive {
+        display: block; } }
 
 .welcome .wrapper {
   text-align: center; }
@@ -398,6 +439,16 @@ header .logoNav nav.show {
     border-radius: 5px; }
   .container .card--left {
     text-align: left; }
+
+@media (max-width: 775px) {
+  .services .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .services .container .card {
+      width: 100%;
+      margin-left: 0; } }
 
 .card__list {
   list-style: none;
@@ -665,10 +716,6 @@ nav .nav__container--column {
     color: white; }
 
 .gallery--instagram {
-  -ms-flex-line-pack: distribute;
-  align-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   height: auto; }
   .gallery--instagram .gallery__image--small {
     margin-right: 10px;

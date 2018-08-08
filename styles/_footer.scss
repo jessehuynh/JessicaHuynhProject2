@@ -61,13 +61,8 @@ nav {
 }
 
 .gallery--instagram {
-    // border:1px solid paleturquoise;
-    align-content: space-around;
-    justify-content: space-around;
+    // border:1px solid cyan;
     height:auto;
-    @include breakPoint(firstBreak) {
-        // height:70%;
-    }
     .gallery__image--small {
         margin-right:10px;
         margin-bottom:10px;

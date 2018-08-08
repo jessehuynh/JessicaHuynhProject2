@@ -33,7 +33,6 @@ header .wrapper {
     }
     @include breakPoint(fifthBreak) {
         flex-flow:row wrap;
-        // justify-content:space-around;
         // border:1px solid red;
     }
     .logoNav__logo--black {
@@ -91,17 +90,20 @@ nav {
     }
 }
 
-
 // HAMBURGER MENU 
 
 .hamburger {
+    display:none;
     // border:1px solid red;
     @include fontSize(3.5rem, 1);
+    @include breakPoint(fifthBreak) {
+        display:block;
+    }
 }
 
 header .logoNav {
     @include breakPoint(fifthBreak) {
-        border:1px solid red;
+        // border:1px solid red;
         justify-content:space-between;
     }
     nav {
@@ -111,12 +113,50 @@ header .logoNav {
         }
     }
     nav.show {
-        display:block;
+        display:none;
         background:white;
+        @include breakPoint(fifthBreak) {
+            display:block;
+        }
         .nav__container {
-            background:white;
+            background:$primary;
             @include position(absolute,0,0,0,0);
             margin:0;
+            display:flex;
+            flex-direction:column;
+            // align-items:center;
+            // justify-content:space-around;
+            color:$white;
+            .nav__listItem:not(.exit-responsive) {
+                // border:1px solid red;
+                width:100%;
+                text-align: center;
+                @include fontSize(4rem, 3)
+                .nav__listItem__a {
+                    color:$white;
+                    width:100%;
+                    display:block;
+                    &:hover {
+                        background:$secondary;
+                    }
+                }
+            }
         }
+    }
+}
+
+.exit {
+    // border:1px solid red;
+    width:min-content;
+    position: relative;
+    top:-80px;
+    right:-20px;
+    .exit-responsive {
+        display:none;
+        @include breakPoint(fifthBreak) {
+            display:block;
+        }
+        color:$white;
+        font-size:4rem;
     }
 }
