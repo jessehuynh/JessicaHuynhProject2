@@ -34,9 +34,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     @include fontSize(6rem, 1);
+    @include breakPoint(fifthBreak) {
+        @include fontSize(5rem, 1);
+    }
+
 }
 
-h4 {
-    @include fontSize(2.75rem, 2);
+a {
+    transition:all 0.3s ease-in-out;
 }
-

@@ -83,7 +83,6 @@
                 <div class="container__half"></div>
             </div>
         </section>
-
         <!-- SERVICES SECTION -->
         <section class="services">
             <div class="wrapper">
@@ -91,7 +90,7 @@
                 <div class="container">
                     <article class="card card--bordered">
                         <i class="fas fa-object-group card__icon--big"></i>
-                        <h5 class="card__heading--small">UX/UI Design</h5>
+                        <h5 class="section__heading--small">UX/UI Design</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                             <ul class="card__list">
@@ -103,7 +102,7 @@
                     </article>
                     <article class="card card--filled">
                         <i class="fas fa-laptop card__icon--big"></i>
-                        <h5 class="card__heading--small">Programming</h5>
+                        <h5 class="section__heading--small">Programming</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                             <ul class="card__list">
@@ -115,7 +114,7 @@
                     </article>
                     <article class="card card--bordered">
                         <i class="fas fa-chart-line card__icon--big"></i>
-                        <h5 class="card__heading--small">Analytics</h5>
+                        <h5 class="section__heading--small">Analytics</h5>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, impedit!
                             <ul class="card__list">
@@ -131,14 +130,17 @@
 
         <!-- TESTIMOIALS SECTION -->
         <section class="testimonials">
-            <div class="wrapper">
+            <div class="flickity">
                 <h3 class="section__heading section__heading--white">People Say About Us</h3>
-                <figure class="icon">
-                    <img src="assets/image-5.jpeg" alt="">
-                </figure>
-                <p class="testmonial--grey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis ab labore sapiente quos amet sit mollitia quam nihil itaque minima, ipsum numquam voluptatibus, tempora voluptas dolore expedita laboriosam. Officiis est, vero harum doloribus minima distinctio eligendi illum repudiandae adipisci impedit, consequuntur doloremque nam architecto dignissimos magnam consequatur. Dolores, neque quasi.</p>
-                <p class="testimonial--white">Lewis</p>
+                <div class="testimonial">
+                    <figure class="icon">
+                        <img src="assets/image-5.jpeg" alt="">
+                    </figure>
+                    <p class="testmonial--grey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis ab labore sapiente quos amet sit mollitia quam nihil itaque minima, ipsum numquam voluptatibus, tempora voluptas dolore expedita laboriosam. Officiis est, vero harum doloribus minima distinctio eligendi illum repudiandae adipisci impedit, consequuntur doloremque nam architecto dignissimos magnam consequatur. Dolores, neque quasi.</p>
+                    <p class="testimonial--white">Lewis</p>
+                </div>
             </div>
+            
         </section>
 
         <!-- GALLERY SECTION -->
@@ -188,9 +190,9 @@
             <div class="wrapper">
                 <h3 class="section__heading">Services</h3>
                 <div class="container">
-                    <article class="moreServices__text">
+                    <article class="moreServices__text moreServices__text--first">
                         <span class="moreServices__text__number">1.</span>
-                        <h4>Design</h4>
+                        <h4 class="section__heading--BW">Design</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio officia, est nulla eveniet ab doloremque dolor consequuntur quasi earum, tenetur ex et adipisci alias reprehenderit. Ut architecto ipsum possimus soluta itaque, sed repudiandae voluptatem sit iusto provident earum placeat illo.</p>
                         <button class="btn btn--blue"><a href="#">More</a></button>
                     </article>
@@ -198,9 +200,9 @@
                 </div>
                 <div class="container">
                     <div class="container__half"></div>
-                    <article class="moreServices__text">
+                    <article class="moreServices__text moreServices__text--second">
                             <span class="moreServices__text__number">2.</span>
-                        <h4>Analytics</h4>
+                        <h4 class="section__heading--BW">Analytics</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eaque ducimus voluptates magni ipsam amet deserunt quasi commodi perferendis veniam doloremque laboriosam, iusto non nulla! Quae quod dolor enim quam nesciunt eos earum perferendis, expedita et a culpa nisi dolorem.</p>
                         <button class="btn btn--blue"><a href="#">More</a></button>
                     </article>
@@ -252,13 +254,23 @@
     </main>
     <!-- MAIN ENDS -->
 
+    <aside>
+        <nav class="floating__nav">
+            <ul class="floating__nav__container">
+                <li class="nav__listItem"><a class="nav__listItem__a" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="nav__listItem"><a class="nav__listItem__a" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav__listItem"><a class="nav__listItem__a" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <!-- FOOTER STARTS -->
     <footer>
         <div class="wrapper">
             <div class="container container--borderBottom">
                 <div class="card card--left">
                     <h5 class="section__heading--small section__heading--white">Contact</h5>
-                    <nav>
+                    <nav class="nav nav--column">
                         <ul class="nav__container nav__container--column">
                             <li class="nav__listItem nav__listItem--lowercase">
                                 <a class="nav__listItem__a nav__listItem__a--white" href="#">infohackeryou.com</a>
@@ -273,7 +285,7 @@
                     </nav>
                     <form action="message.php" method="POST" class="myForm" autocomplete="off" name="myForm">
                         <input type="email" class="email" name="email" placeholder="email address">
-                        <button><i class="fas fa-paper-plane card__icon--small"></i></button>
+                        <button class="btn__icon"><i class="fas fa-paper-plane card__icon--small"></i></button>
                     </form>
                 </div>
                 <div class="card card--left">
@@ -312,7 +324,7 @@
             </div>
             <div class="logoNav logoNav--column">
                 <h2 class="logoNav__logo logoNav__logo--white">Corporate</h2>
-                <nav class="nav">
+                <nav class="nav nav--row">
                     <ul class="nav__container nav__container--centered">
                         <li class="nav__listItem nav__listItem--white">
                             <a class="nav__listItem__a nav__listItem__a--white" href="#">Demo</a>
@@ -341,14 +353,21 @@
      <script>
          	$(document).ready(function(){
 		   	$('.hamburger').on('click', function(){
-		   		// toggle class show on the menu
 		   		$('header nav').toggleClass('show');
 		   	});
 
 		   	$('.exit-responsive').on('click', function(){
-		   		// toggle class show on the menu
 		   		$('header nav').toggleClass('show');
 		   	});
+
+            $('.testimonials').on('click', function(){
+		   		$('.testimonials').toggleClass('show');
+		   	});
+
+            // $('.testimonials').on('click', function(){
+            // $('.testimonials').toggleClass('show');
+		   	// });
+
 		});
      
      </script>

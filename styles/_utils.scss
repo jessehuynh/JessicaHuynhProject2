@@ -28,4 +28,10 @@ $white:white;
     @if $point == fifthBreak {
         @media (max-width:775px) {@content;}
     }
+    @if $point == sixthBreak {
+        @media (max-width:675px) {@content;}
+    }
+    @if $point == seventhBreak {
+        @media (max-width:450px) {@content;}
+    }
 }

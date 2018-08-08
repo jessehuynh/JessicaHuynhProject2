@@ -24,7 +24,19 @@
     }
 }
 .section__heading--white {
+    @include fontSize(2.75rem, 2);
     color:$white;
+    @include breakPoint(secondBreak) {
+        @include fontSize(2rem, 2);
+    }
+}
+
+.section__heading--BW {
+    color:$base;
+    @include fontSize(2.75rem, 2);
+    @include breakPoint(sixthBreak) {
+        color:$white;
+    }
 }
 
 // WHY CHOOSE US SECTION STYLES
@@ -133,6 +145,10 @@
     }
 }
 
+.card__heading--small {
+
+}
+
 .services .container {
     @include breakPoint(fifthBreak) {
         // border:1px solid rebeccapurple; 
@@ -160,6 +176,32 @@
     color:$white;
     text-align:center;
     padding:2%;
+    @include breakPoint(seventhBreak) {
+        position:fixed;
+        right:0;
+        bottom:200px;
+        // border:1px solid red;
+        z-index:10;
+        // display:none;
+        width:10%;
+        // height:10%;
+
+        transition:all 1s;
+        .section__heading {
+            display:none;
+        }
+    }
+}
+
+.testimonials.show {
+    // display:block;
+    width:100%;
+    height:calc(min-content / 2);
+    color:$white;
+    transform:scale(1.5);
+    .section__heading {
+        display:block;
+    }
 }
 
 .icon {
@@ -180,6 +222,9 @@
         position: relative;
         &:hover .gallery__image__caption {
             display:flex;
+        }
+        @include breakPoint(thirdBreak) {
+            width:calc(100% / 2);
         }
     }
     .gallery__image__caption {
@@ -202,6 +247,12 @@
     }
 }
 
+main .gallery {
+    // border:1px solid slateblue;
+    @include breakPoint(seventhBreak) {
+        display:none;
+    }
+}
 //  SERVICES CONTINUED SECTION STYLES
 
 .moreServices .wrapper {
@@ -229,6 +280,32 @@
 
         }
     }
+
+    .moreServices__text--first {
+        @include breakPoint(sixthBreak) {
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../assets/image-11.jpeg) no-repeat;
+        }
+    }
+    .moreServices__text--second {
+        @include breakPoint(sixthBreak) {
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../assets/image-10.jpeg) no-repeat;
+            border-top:1px solid $white;
+            border-bottom:1px solid $white;
+        }
+    }
+    .moreServices__text {
+        @include breakPoint(sixthBreak) {
+            width:100%;
+            background-attachment: fixed;
+            background-size:cover;
+            background-position: bottom;
+            background-attachment: fixed;
+            color:$white;
+            border-top:1px solid $white;
+
+        
+        }
+    }
     .container__half:nth-child(1) {
         background:url(../assets/image-11.jpeg) no-repeat;
         background-size:cover;
@@ -240,19 +317,31 @@
         background-size:cover;
         background-position: bottom;
     }
+    .container__half {
+        @include breakPoint(sixthBreak) {
+            display:none;
+        }
+    }
     .moreServices__text {
         padding:5%;
         position: relative;
         .moreServices__text__number {
-            @include position(absolute, -15px, 350px, 0, 0);
+            @include position(absolute, -10px, 0, 0, 60px);
             font-family:'Montserrat', sans-serif;
             font-size:10rem;
             color:rgba(229, 227, 227, 0.5);
             font-weight:700;
+            width:min-content;
+            // border:1px solid red;
             @include breakPoint(firstBreak) {
-                left:50px;
-                top:15px;
+                left:60px;
+                top:20px;
                 font-size:8rem;
+            }
+            @include breakPoint(sixthBreak) {
+                // border:1px solid red;
+                top:0;
+                left:50px;
             }
         }
     }
@@ -290,6 +379,10 @@
                 padding:10px 30px;
                 border-radius:5px;
                 margin:3%;
+                transition:all 0.3s;
+                &:hover {
+                    background:none;
+                }
             }
         }
     }
@@ -334,4 +427,27 @@
 
 .nav__listItem__a--white {
     color:$white;
+}
+
+// FLOATING NAV
+
+.floating__nav {
+    // border:1px solid red;
+    position:fixed;
+    bottom:50px;
+    right:20px;
+    width:min-content;
+    .floating__nav__container {
+        // border:1px solid blue;
+        list-style:none;
+        .nav__listItem {
+            .nav__listItem__a {
+            color:grey;
+            &:hover {
+                color:$primary;
+            }
+                
+            }
+        }
+    }
 }
