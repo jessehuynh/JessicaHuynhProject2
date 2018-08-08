@@ -276,6 +276,8 @@ nav {
   @media (max-width: 775px) {
     .hamburger {
       display: block; } }
+  .hamburger:hover {
+    color: white; }
 
 @media (max-width: 775px) {
   header .logoNav {
@@ -497,30 +499,51 @@ header .logoNav nav.show {
   color: white;
   text-align: center;
   padding: 2%; }
+  .testimonials span {
+    display: none; }
   @media (max-width: 450px) {
     .testimonials {
       position: fixed;
       right: 0;
-      bottom: 200px;
+      bottom: 0px;
       z-index: 10;
-      width: 10%;
+      width: 25%;
+      height: 5%;
       -webkit-transition: all 1s;
       -o-transition: all 1s;
-      transition: all 1s; }
-      .testimonials .section__heading {
-        display: none; } }
+      transition: all 1s;
+      background: rgba(0, 0, 0, 0.5); }
+      .testimonials .section__heading, .testimonials p, .testimonials .icon {
+        display: none; }
+      .testimonials .testimonial {
+        padding: 3%; }
+      .testimonials span {
+        display: block; } }
 
 .testimonials.show {
   width: 100%;
-  height: calc(-webkit-min-content / 2);
-  height: calc(-moz-min-content / 2);
-  height: calc(min-content / 2);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   color: white;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5); }
-  .testimonials.show .section__heading {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  background: #1d1d1d; }
+  .testimonials.show .flickity, .testimonials.show .flickity__cell {
     display: block; }
+  .testimonials.show .section__heading, .testimonials.show p, .testimonials.show .icon {
+    display: block; }
+  .testimonials.show span {
+    display: none; }
+
+.testimonial {
+  width: 60%;
+  margin: 1% auto; }
+  @media (max-width: 450px) {
+    .testimonial {
+      margin: 0 auto;
+      width: 100%; } }
 
 .icon {
   width: 10%;
@@ -764,15 +787,24 @@ header .logoNav nav.show {
 
 .floating__nav {
   position: fixed;
-  bottom: 50px;
-  right: 20px;
+  bottom: 40px;
+  right: 0px;
   width: -webkit-min-content;
   width: -moz-min-content;
-  width: min-content; }
+  width: min-content;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0 1%; }
+  @media (max-width: 450px) {
+    .floating__nav {
+      padding: 0 2%; } }
   .floating__nav .floating__nav__container {
-    list-style: none; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0; }
     .floating__nav .floating__nav__container .nav__listItem .nav__listItem__a {
-      color: grey; }
+      color: #1d1d1d; }
       .floating__nav .floating__nav__container .nav__listItem .nav__listItem__a:hover {
         color: #0e5f88; }
 

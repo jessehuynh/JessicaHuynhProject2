@@ -115,6 +115,9 @@ nav {
     @include breakPoint(fifthBreak) {
         display:block;
     }
+    &:hover {
+        color:$white;
+    }
 }
 
 header .logoNav {

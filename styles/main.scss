@@ -176,19 +176,28 @@
     color:$white;
     text-align:center;
     padding:2%;
+    span {
+        display:none;
+    }
     @include breakPoint(seventhBreak) {
         position:fixed;
         right:0;
-        bottom:200px;
+        bottom:0px;
         // border:1px solid red;
         z-index:10;
         // display:none;
-        width:10%;
-        // height:10%;
-
+        width:25%;
+        height:5%;
         transition:all 1s;
-        .section__heading {
+        background:rgba(0,0,0,0.5);
+        .section__heading,p, .icon {
             display:none;
+        }
+        .testimonial {
+            padding:3%;
+        }
+        span {
+            display:block;
         }
     }
 }
@@ -196,13 +205,38 @@
 .testimonials.show {
     // display:block;
     width:100%;
-    height:calc(min-content / 2);
+    height:min-content;
     color:$white;
-    transform:scale(1.5);
-    .section__heading {
+    transform:scale(1);
+    background:$base;
+    .flickity, .flickity__cell {
         display:block;
     }
+    .section__heading, p, .icon {
+        display:block;
+    }
+    span {
+        display:none;
+    }
 }
+
+.testimonial {
+    width:60%;
+    margin:1% auto;
+    @include breakPoint(seventhBreak) {
+        margin:0 auto;
+        width:100%;
+    }
+}
+// COMMENNTING OUT FOR LATER USE WHEN I HAVE MORE TIME TO TACKLE THIS
+
+// .flickity {
+//     width:100%;
+// }
+
+// .flickity__cell {
+//     width:100%;
+// }
 
 .icon {
     width:10%;
@@ -434,15 +468,22 @@ main .gallery {
 .floating__nav {
     // border:1px solid red;
     position:fixed;
-    bottom:50px;
-    right:20px;
+    bottom:40px;
+    right:0px;
     width:min-content;
+    background:rgba(255,255,255,0.5);
+    padding:0 1%;
+    @include breakPoint(seventhBreak) {
+        padding:0 2%;
+    }
     .floating__nav__container {
+        justify-content: center;
         // border:1px solid blue;
         list-style:none;
+        padding:0;
         .nav__listItem {
             .nav__listItem__a {
-            color:grey;
+            color:$base;
             &:hover {
                 color:$primary;
             }
