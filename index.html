@@ -15,8 +15,10 @@
         <div class="wrapper">
             <div class="logoNav">
                 <h2 class="logoNav__logo--black">Corporate</h2>
+                <p class="hamburger"><i class="fas fa-bars"></i></p>
                 <nav class="nav">
                     <ul class="nav__container">
+                        <li class="exit-responsive nav__listItem"><i class="fas fa-times"></i></li>
                         <li class="nav__listItem nav__listItem--big"><a class="nav__listItem__a nav__listItem__a--black" href="#">Demo</a></li>
                         <li class="nav__listItem nav__listItem--big"><a class="nav__listItem__a nav__listItem__a--black" href="#">Blog</a></li>
                         <li class="nav__listItem nav__listItem--big"><a class="nav__listItem__a nav__listItem__a--black" href="#">Pages</a></li>
@@ -323,5 +325,22 @@
         </div>
     </footer>
      <!-- FOOTER ENDS -->
+
+     
+     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+     <script>
+         	$(document).ready(function(){
+		   	$('.hamburger').on('click', function(){
+		   		// toggle class show on the menu
+		   		$('header nav').toggleClass('show');
+		   	});
+
+		   	$('.exit-responsive').on('click', function(){
+		   		// toggle class show on the menu
+		   		$('header nav').toggleClass('show');
+		   	});
+		});
+     
+     </script>
 </body>
 </html>

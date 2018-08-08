@@ -32,7 +32,8 @@ header .wrapper {
         margin-top:2%;
     }
     @include breakPoint(fifthBreak) {
-        align-items: flex-start;
+        flex-flow:row wrap;
+        // justify-content:space-around;
         // border:1px solid red;
     }
     .logoNav__logo--black {
@@ -54,11 +55,8 @@ nav {
         justify-content: flex-end;
         // border:1px solid cyan;
         padding:0;
-        @include breakPoint(fourthBreak) {
+        @include breakPoint(thirdBreak) {
             justify-content: center;
-        }
-        @include breakPoint(fifthBreak) {
-            display:none;
         }
         .nav__listItem {
             list-style:none;
@@ -90,5 +88,35 @@ nav {
     a {
         color:$white;
         text-decoration:none;
+    }
+}
+
+
+// HAMBURGER MENU 
+
+.hamburger {
+    // border:1px solid red;
+    @include fontSize(3.5rem, 1);
+}
+
+header .logoNav {
+    @include breakPoint(fifthBreak) {
+        border:1px solid red;
+        justify-content:space-between;
+    }
+    nav {
+        @include breakPoint(fifthBreak) {
+            display:none;
+            border:1px solid sienna;
+        }
+    }
+    nav.show {
+        display:block;
+        background:white;
+        .nav__container {
+            background:white;
+            @include position(absolute,0,0,0,0);
+            margin:0;
+        }
     }
 }

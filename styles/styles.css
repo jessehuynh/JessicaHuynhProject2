@@ -191,9 +191,10 @@ header .wrapper {
       margin-top: 2%; } }
   @media (max-width: 775px) {
     .logoNav {
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap; } }
   .logoNav .logoNav__logo--black {
     font-size: 3.5rem;
     line-height: 1;
@@ -219,14 +220,11 @@ nav {
     -ms-flex-pack: end;
     justify-content: flex-end;
     padding: 0; }
-    @media (max-width: 840px) {
+    @media (max-width: 940px) {
       nav .nav__container {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; } }
-    @media (max-width: 775px) {
-      nav .nav__container {
-        display: none; } }
     nav .nav__container .nav__listItem {
       list-style: none;
       text-transform: uppercase;
@@ -251,6 +249,35 @@ nav {
   .btn a {
     color: white;
     text-decoration: none; }
+
+.hamburger {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #1d1d1d; }
+
+@media (max-width: 775px) {
+  header .logoNav {
+    border: 1px solid red;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+@media (max-width: 775px) {
+  header .logoNav nav {
+    display: none;
+    border: 1px solid sienna; } }
+
+header .logoNav nav.show {
+  display: block;
+  background: white; }
+  header .logoNav nav.show .nav__container {
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0; }
 
 .welcome .wrapper {
   text-align: center; }
@@ -390,20 +417,14 @@ nav {
   margin: 0 auto; }
 
 .gallery {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
-
-.gallery {
+  flex-flow: row wrap;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
   .gallery .gallery__image {
     width: calc(100% / 4);
